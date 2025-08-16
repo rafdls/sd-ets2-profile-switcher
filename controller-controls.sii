@@ -1,6 +1,6 @@
 SiiNunit
 {
-input_config : _nameless.3f59.ba70 {
+input_config : _nameless.67ed.8950 {
  version: 29
  config_lines: 579
  config_lines[0]: "device keyboard `sys.keyboard`"
@@ -22,8 +22,8 @@ input_config : _nameless.3f59.ba70 {
  config_lines[16]: "constant c_lr_dz 0.160000"
  config_lines[17]: "constant c_ud_dz 0.160000"
  config_lines[18]: "constant c_stm_simple 1.000000"
- config_lines[19]: "constant c_steer_func 0.000000"
- config_lines[20]: "constant c_steer_dz 0.160000"
+ config_lines[19]: "constant c_steer_func 1.000000"
+ config_lines[20]: "constant c_steer_dz 0.000000"
  config_lines[21]: "constant c_throt_dz 0.100000"
  config_lines[22]: "constant c_brake_dz 0.100000"
  config_lines[23]: "constant c_clutch_dz 0.100000"
@@ -215,7 +215,7 @@ input_config : _nameless.3f59.ba70 {
  config_lines[209]: "mix wndnext `keyboard.pgup?0`"
  config_lines[210]: "mix wndprev `keyboard.pgdn?0`"
  config_lines[211]: "mix j_look_lr_c `1`"
- config_lines[212]: "mix j_look_ud_c `no_cstm_mod?0`"
+ config_lines[212]: "mix j_look_ud_c `1`"
  config_lines[213]: "mix j_steer_c `1`"
  config_lines[214]: "mix j_throttle_c `1`"
  config_lines[215]: "mix j_brake_c `no_cstm_mod?0`"
@@ -354,7 +354,7 @@ input_config : _nameless.3f59.ba70 {
  config_lines[348]: "mix horn `keyboard.h?0 || modifier(no_cstm_mod?0, joy.context3?0) | semantical.horn?0`"
  config_lines[349]: "mix airhorn `keyboard.n?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), joy.context3?0) | semantical.airhorn?0`"
  config_lines[350]: "mix lighthorn `keyboard.j?0 | semantical.lighthorn?0`"
- config_lines[351]: "mix beacon `keyboard.o?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), joy.context1?0) | semantical.beacon?0`"
+ config_lines[351]: "mix beacon `keyboard.o?0 | semantical.beacon?0`"
  config_lines[352]: "mix motorbrake `keyboard.b?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), derived(joy.button_lt?0, joy.lt)) | semantical.motorbrake?0`"
  config_lines[353]: "mix engbraketog `semantical.engbraketog?0`"
  config_lines[354]: "mix engbrakeup `semantical.engbrakeup?0`"
@@ -394,7 +394,7 @@ input_config : _nameless.3f59.ba70 {
  config_lines[388]: "mix cruiectrl `keyboard.c?0 || modifier(no_cstm_mod?0, long_press(joy.cancel?0)) | semantical.cruiectrl?0`"
  config_lines[389]: "mix cruiectrlinc `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), joy.context2?0) | semantical.cruiectrlinc?0`"
  config_lines[390]: "mix cruiectrldec `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), joy.accept?0) | semantical.cruiectrldec?0`"
- config_lines[391]: "mix cruiectrlres `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), short_press(joy.cancel?0)) | semantical.cruiectrlres?0`"
+ config_lines[391]: "mix cruiectrlres `semantical.cruiectrlres?0`"
  config_lines[392]: "mix accmode `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), long_press(joy.cancel?0)) | semantical.accmode?0`"
  config_lines[393]: "mix laneassist `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), short_press(joy.pov1_up?0)) | semantical.laneassist?0`"
  config_lines[394]: "mix light `keyboard.l?0 || modifier(no_cstm_mod?0, short_press(joy.context1?0)) | semantical.light?0`"
@@ -470,8 +470,8 @@ input_config : _nameless.3f59.ba70 {
  config_lines[464]: "mix camwalk_ud `-semantical.camwalk_ud?0`"
  config_lines[465]: "mix camwalk_lrs `looklranaraw * c_jrspeed`"
  config_lines[466]: "mix camwalk_uds `lookudanaraw * c_jrspeed`"
- config_lines[467]: "mix gearup `keyboard.lshift?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), derived(joy.rstick_up?0, joy.ry)) | semantical.gearup?0`"
- config_lines[468]: "mix geardown `keyboard.lctrl?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), derived(joy.rstick_down?0, joy.ry)) | semantical.geardown?0`"
+ config_lines[467]: "mix gearup `keyboard.lshift?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), short_press(joy.cancel?0)) | semantical.gearup?0`"
+ config_lines[468]: "mix geardown `keyboard.lctrl?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), joy.context1?0) | semantical.geardown?0`"
  config_lines[469]: "mix gear0 `unbound?0 || modifier(cstm_mod_1?0 & (! cstm_mod_2?0) & (! cstm_mod_3?0) & (! cstm_mod_4?0) & (! cstm_mod_5?0) & (! cstm_mod_6?0), long_press(joy.context4?0)) | semantical.gear0?0`"
  config_lines[470]: "mix geardrive `semantical.geardrive?0`"
  config_lines[471]: "mix gearreverse `semantical.gearreverse?0`"
