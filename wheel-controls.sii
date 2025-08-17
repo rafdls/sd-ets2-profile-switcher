@@ -1,11 +1,11 @@
 SiiNunit
 {
-input_config : _nameless.9f11.3b70 {
+input_config : _nameless.8655.0ba0 {
  version: 29
  config_lines: 579
  config_lines[0]: "device keyboard `sys.keyboard`"
  config_lines[1]: "device mouse `fusion.mouse`"
- config_lines[2]: "device joy `di8.'{9E573EDD-7734-11D2-8D4A-23903FB6BDF7}|{C262046D-0000-0000-0000-504944564944}'`"
+ config_lines[2]: "device joy `di8.'{9E573EDF-7734-11D2-8D4A-23903FB6BDF7}|{C262046D-0000-0000-0000-504944564944}'`"
  config_lines[3]: "device phys_mouse ``"
  config_lines[4]: "device joy2 `steam.fusion`"
  config_lines[5]: "device joy3 ``"
@@ -233,8 +233,8 @@ input_config : _nameless.9f11.3b70 {
  config_lines[227]: "mix camcycle `short_press(joy.pov1_up?0) || modifier(no_cstm_mod?0, short_press(joy2.pov1_up?0)) | semantical.camcycle?0`"
  config_lines[228]: "mix camdbg `keyboard.key0?0`"
  config_lines[229]: "mix camwnd `keyboard.minus?0`"
- config_lines[230]: "mix camreset `short_press(joy.b2?0) || modifier(no_cstm_mod?0, short_press(joy2.cancel?0)) | semantical.camreset?0`"
- config_lines[231]: "mix camrotate `mouse.button_right?0 | semantical.camrotate?0`"
+ config_lines[230]: "mix camreset `short_press(joy.b2?0) || mouse.button_right?0 | semantical.camreset?0`"
+ config_lines[231]: "mix camrotate `semantical.camrotate?0`"
  config_lines[232]: "mix camzoomin `mouse.wheel_up?0 | semantical.camzoomin?0`"
  config_lines[233]: "mix camzoomout `mouse.wheel_down?0 | semantical.camzoomout?0`"
  config_lines[234]: "mix camzoom `mouse.button_middle?0 || modifier(no_cstm_mod?0, joy2.context4?0) | semantical.camzoom?0`"
